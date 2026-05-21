@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Denied — Blazzze{% endblock %}
+
+{% block content %}
+<section style="text-align: center; padding: 4rem 2rem; min-height: 50vh;">
+  <h1 style="
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: clamp(3rem, 12vw, 8rem);
+    color: var(--blz-red);
+    text-shadow: 6px 6px 0 var(--blz-dark);
+    margin-bottom: 1rem;
+    line-height: 0.95;
+  ">
+    DENIED 🚫
+  </h1>
+
+  <p style="font-size: 1.4rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+    Uhmmm...Aight bet. Come back in a few years.<br>
+    <span style="color: var(--blz-gray); font-size: 1rem;">
+      Or just lie next time, Blazzze doesn't actually have a way to check. 
+    </span>
+  </p>
+
+  <a href="{% url 'core:age_gate' %}" style="
+    display: inline-block;
+    font-family: 'Bungee', sans-serif;
+    background: var(--blz-green);
+    color: var(--blz-dark);
+    border: 4px solid var(--blz-dark);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--blz-dark);
+  ">
+    OKAY I LIED, I'M 18+
+  </a>
+</section>
+{% endblock %}
