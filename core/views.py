@@ -30,3 +30,7 @@ def age_gate(request):
 def denied(request):
     """For the users who said no. Blazzze roasts them gently."""
     return render(request, "core/denied.html")
+
+def preview_404(request):
+    """Dev-only: render the 404 template so we can iterate on it."""
+    return render(request, "404.html", status=404)

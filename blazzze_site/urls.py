@@ -5,6 +5,7 @@ from django.urls import include, path
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("munchies/", include("munchies.urls")),
     path("", include("core.urls")),  # core app handles the root
 ]
 

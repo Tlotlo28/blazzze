@@ -11,7 +11,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Bungee&family=Space+Grotesk:wght@400;500;700;800&display=swap" rel="stylesheet">
-
+  <script src="https://unpkg.com/htmx.org@2.0.4" defer></script>
   <style>
     :root {
       --blz-green: #8ba84a;
@@ -121,7 +121,7 @@
       <nav>
         <ul>
           <li><a href="{% url 'core:home' %}">Home</a></li>
-          <li><a href="#">Munchies</a></li>
+          <li><a href="{% url 'munchies:list' %}">Munchies</a></li>
           <li><a href="#">Buy</a></li>
           <li><a href="#">Chat w/ Blazzze</a></li>
           <li><a href="#">Why Weed?</a></li>

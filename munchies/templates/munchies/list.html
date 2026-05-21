@@ -1,0 +1,136 @@
+{% extends "base.html" %}
+{% load blazzze_tags %}
+
+{% block title %}Munchies — Blazzze{% endblock %}
+
+{% block content %}
+<style>
+  .munchies-hero { text-align: center; padding: 3rem 1rem 2rem; }
+  .munchies-title {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: clamp(3rem, 10vw, 7rem);
+    color: var(--blz-green-dark);
+    text-shadow: 4px 4px 0 var(--blz-green);
+    line-height: 0.95;
+  }
+  .munchies-sub {
+    color: var(--blz-gray);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 1rem auto;
+  }
+  .snack-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+  }
+  .snack-card {
+    background: var(--blz-cream);
+    border: 4px solid var(--blz-dark);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0 var(--blz-green-dark);
+  }
+  .snack-emoji { font-size: 3.5rem; line-height: 1; margin-bottom: 0.5rem; }
+  .snack-name {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 1.5rem;
+    color: var(--blz-dark);
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+  }
+  .snack-desc { color: var(--blz-dark); margin-bottom: 1rem; font-size: 0.95rem; }
+  .snack-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px dashed var(--blz-dark);
+    padding-top: 0.75rem;
+  }
+  .vibe-badge {
+    font-family: 'Bungee', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    background: var(--blz-green);
+    color: var(--blz-dark);
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    border: 2px solid var(--blz-dark);
+  }
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--blz-gray);
+    font-style: italic;
+  }
+  .hof-section {
+    margin-top: 4rem;
+    text-align: center;
+    padding: 2.5rem 2rem;
+    background: var(--blz-dark);
+    color: var(--blz-cream);
+    border-radius: 24px;
+    border: 4px solid var(--blz-green);
+  }
+  .hof-title {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
+    margin-bottom: 0.5rem;
+    color: var(--blz-cream);
+  }
+  .hof-btn {
+    font-family: 'Bungee', sans-serif;
+    background: var(--blz-red);
+    color: var(--blz-cream);
+    border: 4px solid var(--blz-cream);
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 4px 4px 0 var(--blz-cream);
+    margin-top: 1rem;
+  }
+  #hof-response { margin-top: 1.5rem; min-height: 50px; }
+</style>
+
+<section class="munchies-hero">
+  <h1 class="munchies-title">MUNCHIES</h1>
+  <p class="munchies-sub">
+    Sacred snack scripture. Curated by Blazzze, eaten by the rest of us.
+  </p>
+</section>
+
+<div class="snack-grid">
+  {% for snack in snacks %}
+  <article class="snack-card">
+    <div class="snack-emoji">{{ snack.emoji }}</div>
+    <h2 class="snack-name">{{ snack.name }}</h2>
+    <p class="snack-desc">{{ snack.description }}</p>
+    <div class="snack-meta">
+      <span class="vibe-badge">{{ snack.get_vibe_display }}</span>
+      <span title="Difficulty when blazed">{{ snack.difficulty_leaves }}</span>
+    </div>
+  </article>
+  {% empty %}
+  <div class="empty-state">
+    The munchies are empty. Add some via <code>/admin/</code>.<br>
+    (Or maybe Blazzze ate them all.)
+  </div>
+  {% endfor %}
+</div>
+
+<section class="hof-section">
+  <h2 class="hof-title">USER-SUBMITTED HALL OF FAME 🏆</h2>
+  <p style="opacity: 0.85;">Want to add your own legendary snack combo? Hit the button.</p>
+  <button class="hof-btn"
+          hx-get="{% url 'munchies:hall_of_fame_roast' %}"
+          hx-target="#hof-response"
+          hx-swap="innerHTML">
+    SUBMIT TO HALL OF FAME
+  </button>
+  <div id="hof-response"></div>
+</section>
+{% endblock %}

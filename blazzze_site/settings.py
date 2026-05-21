@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     # Local apps
     "core",
+    "munchies",
 ]
 
 # Debug toolbar only in development
