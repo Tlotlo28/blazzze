@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load blazzze_tags %}
+
+{% block title %}Blazzze — The Internet's Couch{% endblock %}
+
+{% block content %}
+<section style="text-align:center; padding: 4rem 1rem;">
+  <h1 style="
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 0.95;
+    letter-spacing: 2px;
+    color: var(--blz-green-dark);
+    text-shadow: 4px 4px 0 var(--blz-green);
+    margin-bottom: 1rem;
+  ">
+    THE INTERNET'S<br>COUCH 🛋️
+  </h1>
+
+  <p style="
+    font-size: 1.25rem;
+    color: var(--blz-gray);
+    max-width: 600px;
+    margin: 0 auto 3rem;
+  ">
+    A hub for weed heads, snack philosophers, and people who clicked the wrong link.
+    You're home now. Probably.
+  </p>
+
+  <!-- BLAZZZE SPEAKS -->
+  <div style="
+    background: var(--blz-dark);
+    color: var(--blz-cream);
+    border: 4px solid var(--blz-green);
+    border-radius: 24px;
+    padding: 2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 8px 8px 0 var(--blz-green-dark);
+    position: relative;
+  ">
+    <p style="
+      font-family: 'Anton', sans-serif;
+      font-size: 0.9rem;
+      letter-spacing: 3px;
+      color: var(--blz-green);
+      margin-bottom: 1rem;
+    ">
+      BLAZZZE SAYS:
+    </p>
+    <p style="font-size: 1.4rem; font-weight: 600;">
+      "{% blazzze_says %}"
+    </p>
+  </div>
+
+  <p style="margin-top: 3rem; color: var(--blz-gray); font-size: 0.9rem;">
+    🔄 Refresh the page. Blazzze has more to say.
+  </p>
+</section>
+{% endblock %}
