@@ -110,6 +110,17 @@
       text-decoration: underline;
     }
   </style>
+<meta name="csrf-token" content="{{ csrf_token }}">
+
+<script>
+  document.addEventListener('htmx:configRequest', function(event) {
+    const token = document.querySelector('meta[name=csrf-token]');
+    if (token) {
+      event.detail.headers['X-CSRFToken'] = token.content;
+    }
+  });
+</script>
+
 </head>
 <body>
   <div class="page-wrap">
@@ -122,8 +133,8 @@
         <ul>
           <li><a href="{% url 'core:home' %}">Home</a></li>
           <li><a href="{% url 'munchies:list' %}">Munchies</a></li>
-          <li><a href="#">Buy</a></li>
-          <li><a href="#">Chat w/ Blazzze</a></li>
+          <li><a href="{% url 'buy:list' %}">Buy</a></li>
+          <li><a href="{% url 'chat:page' %}">Chat w/ Blazzze</a></li>
           <li><a href="#">Why Weed?</a></li>
         </ul>
       </nav>

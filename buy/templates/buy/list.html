@@ -1,0 +1,175 @@
+{% extends "base.html" %}
+{% load blazzze_tags %}
+
+{% block title %}The Stash — Blazzze{% endblock %}
+
+{% block content %}
+<style>
+  .buy-hero { text-align: center; padding: 3rem 1rem 2rem; }
+  .buy-title {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: clamp(3rem, 10vw, 7rem);
+    color: var(--blz-green-dark);
+    text-shadow: 4px 4px 0 var(--blz-green);
+    line-height: 0.95;
+  }
+  .buy-sub { color: var(--blz-gray); font-size: 1.1rem; max-width: 600px; margin: 1rem auto; }
+
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+  }
+
+  .product-card {
+    position: relative;
+    background: var(--blz-cream);
+    border: 4px solid var(--blz-dark);
+    border-radius: 18px;
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0 var(--blz-green-dark);
+    cursor: pointer;
+    transition: transform 0.15s ease;
+    overflow: visible;
+  }
+  .product-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: 9px 9px 0 var(--blz-green-dark);
+  }
+
+  /* SMOKE 🌫️ */
+  .smoke-wisp {
+  position: absolute;
+  top: -12px;
+  width: 45px;
+  height: 45px;
+  background: radial-gradient(circle, rgba(60, 60, 60, 0.5), transparent 70%);
+  border-radius: 50%;
+  filter: blur(11px);
+  pointer-events: none;
+  opacity: 0;
+  animation: smoke-drift 5s ease-out infinite;
+}
+.smoke-wisp:nth-child(1) { left: 12%; animation-delay: 0s; }
+.smoke-wisp:nth-child(2) { left: 35%; animation-delay: 1.5s; }
+.smoke-wisp:nth-child(3) { left: 60%; animation-delay: 3s; }
+.smoke-wisp:nth-child(4) { left: 82%; animation-delay: 2.2s; }
+
+@keyframes smoke-drift {
+  0%   { transform: translateY(0) scale(0.5) rotate(0deg); opacity: 0; }
+  20%  { opacity: 0.85; }
+  100% { transform: translateY(-120px) scale(2.5) rotate(15deg); opacity: 0; }
+}
+
+  .product-img {
+    width: 100%;
+    height: 160px;
+    background: var(--blz-green);
+    border: 3px solid var(--blz-dark);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+  }
+  .product-img img { width: 100%; height: 100%; object-fit: cover; }
+
+  .product-name {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 1.4rem;
+    color: var(--blz-dark);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+  }
+  .product-tagline { color: var(--blz-dark); font-size: 0.95rem; margin-bottom: 1rem; min-height: 2.5em; }
+  .product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px dashed var(--blz-dark);
+    padding-top: 0.75rem;
+  }
+  .product-price {
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.1rem;
+    color: var(--blz-red);
+  }
+  .product-cat {
+    font-family: 'Bungee', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    background: var(--blz-dark);
+    color: var(--blz-cream);
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+  }
+
+  .empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    color: var(--blz-gray);
+    font-style: italic;
+  }
+
+  /* MODAL */
+  #product-modal:empty { display: none; }
+  .modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(26, 26, 26, 0.85);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    animation: fade-in 0.2s ease-out;
+  }
+  @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+</style>
+
+<section class="buy-hero">
+  <h1 class="buy-title">THE STASH 💨</h1>
+  <p class="buy-sub">
+    Real-ish products. Hover the cards — they're smoking.
+  </p>
+</section>
+
+<div class="product-grid">
+  {% for product in products %}
+  <article class="product-card"
+           hx-get="{% url 'buy:product_detail' product.pk %}"
+           hx-target="#product-modal"
+           hx-swap="innerHTML">
+    <span class="smoke-wisp"></span>
+    <span class="smoke-wisp"></span>
+    <span class="smoke-wisp"></span>
+    <span class="smoke-wisp"></span>
+
+    <div class="product-img">
+      {% if product.image %}
+        <img src="{{ product.image.url }}" alt="{{ product.name }}">
+      {% else %}
+        {{ product.emoji }}
+      {% endif %}
+    </div>
+    <h2 class="product-name">{{ product.name }}</h2>
+    <p class="product-tagline">{{ product.tagline }}</p>
+    <div class="product-footer">
+      <span class="product-price">R{{ product.price }}</span>
+      <span class="product-cat">{{ product.get_category_display }}</span>
+    </div>
+  </article>
+  {% empty %}
+  <div class="empty-state">
+    The stash is empty. Add products via <code>/admin/</code>.
+  </div>
+  {% endfor %}
+</div>
+
+<!-- HTMX target for product modal -->
+<div id="product-modal"></div>
+{% endblock %}

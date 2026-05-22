@@ -31,6 +31,8 @@ INSTALLED_APPS = [
     # Local apps
     "core",
     "munchies",
+    "buy",
+    "chat",
 ]
 
 # Debug toolbar only in development

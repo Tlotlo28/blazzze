@@ -1,0 +1,11 @@
+{% if user_message %}
+<div class="msg-bubble msg-user">
+  <div class="msg-label">YOU</div>
+  {{ user_message }}
+</div>
+{% endif %}
+
+<div class="msg-bubble msg-blazzze">
+  <div class="msg-label">BLAZZZE</div>
+  {{ blazzze_response }}
+</div>
