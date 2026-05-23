@@ -77,6 +77,7 @@ KEYWORD_RESPONSES = [
             "Go check the Munchies page. Then come back and tell me you're still hungry. Liar.",
             "3am Quesadilla. That's it. That's the response.",
             "Hungry? Bold of you to expect me to solve problems with my hands.",
+            "If you have the munchies, you don't need a recipe, you need to open the fridge and stare until something looks good. That's how all the best meals are made.",
         ],
     },
     {
@@ -133,6 +134,7 @@ KEYWORD_RESPONSES = [
             "Hey. Don't get used to politeness — this is rare.",
             "Hello. I'm not a people person, but I'll make an exception for you.",
             "Yo. Welcome to the couch. Type something. I'll respond. Maybe helpfully, probably not.",
+            "One day, someone will say 'hi blazzze' and I'll just… ignore it. But today is not that day. Hi.",
         ],
     },
     {
@@ -141,7 +143,7 @@ KEYWORD_RESPONSES = [
             "Bye? Where are you going. The internet is right here.",
             "Aight cool, but I'll still be here when you come back. Lurking. Smiling.",
             "Don't let the tab hit you on the way out.",
-            "Leave safely… and dont text your ex.",
+            "Leave safely… and dont text your ex. unless she texts you first. Then maybe consider it. But only if you're really sure it's a good idea.",
         ],
     },
 ]
@@ -172,6 +174,20 @@ DEFAULT_RESPONSES = [
     "I respect Drake's hustle tho. He knows his brand and he's sticking to it. I should take notes. You know what, im going to be a rapper just like him. Call myself Lil Blazzze and say 'started from the bottom, now we're here' and see if anyone questions it.",
     "Thats crazy. But did you know that if you cut a starfish in half, it can regenerate into two starfish? So technically, they're immortal. Starfish are the real winners here.",
     "Dolphins have names for each other. They use unique whistles to identify themselves and call out to each other. So if you ever feel lonely, just remember that somewhere out there, a dolphin is calling its friends by name and having a great time.",
+    "Well that's one way to look at it. But did you know that the shortest war in history was between Britain and Zanzibar in 1896? It lasted only 38 minutes. So technically, that was a pretty efficient conflict.",
+    "... and on the 8th day, the universe said 'let there be Blazzze' and it was… something.",
+    "Tell me about it. But also, did you know that the average person walks the equivalent of three times around the world in their lifetime? So technically, we're all just a bunch of globetrotters in sneakers.",
+    "You thinking about texting your ex? Don't. But also, did you know that the word 'ex' comes from Latin, meaning 'former'? So technically, your ex is just a former you. Maybe it's time to let go of the past and focus on being the best version of yourself. or just text them, idk.",
+    "Do you think the universe is infinite? It's a common question. But did you know that some scientists believe the universe might be a hologram? Like, everything we see and experience could be a projection from a 2D surface. Mind-blowing, right?",
+    "The world is round. The universe is expanding. Your mind is probably doing the same thing right now.",
+    "What are your thoughts on time? It's a human construct, but it also seems to have a real effect on our lives. Did you know that time can actually slow down or speed up depending on how fast you're moving or how close you are to a massive object? So technically, if you were to travel near a black hole, time would pass much slower for you than for someone on Earth. Talk about a time warp.",
+    "Politics is a mess. But did you know that the word 'politics' comes from the Greek 'polis', meaning 'city'? So technically, politics is just about how we organize ourselves in our cities and communities. Maybe if we focused more on building strong communities and less on arguing over who gets to be in charge, we'd all be better off... or maybe not, idk.",
+    "Remember not to take life too seriously. After all, we're all just a bunch of atoms trying to figure out how to vibe together in this crazy universe.",
+    "My favorite kids movie is probabaly 'Toy Story'. It's a classic. But did you know that the voice of Woody, Tom Hanks, was actually the first choice for Buzz Lightyear? And the voice of Buzz, Tim Allen, was the first choice for Woody? They switched roles and it worked out perfectly. Just goes to show that sometimes, things work out better when they don't go according to plan. or maybe it was just a happy accident, idk.",
+    "Youre Ugandan? That's wild. Did you know that Uganda is home to the world's largest lake, Lake Victoria? It's so big that it has its own weather system. So technically, when it rains in Uganda, it's like a mini monsoon over the lake. Nature's own water park.",
+    "I recommed these movies for you: 'The Wave', 'Everything Everywhere All At Once', 'The Grand Budapest Hotel', 'Midsommar', and 'The Secret Life of Walter Mitty'. But did you know that the longest movie ever made is 'Logistics', which is 857 hours long? It's a documentary about the production cycle of a pedometer, from raw materials to finished product. So technically, if you wanted to watch it all, you'd be committing to a 35-day movie marathon. Talk about dedication.",
+    "Can i call you cousin? I feel like we're vibing on a cousin level. But did you know that the term 'cousin' actually comes from the Latin 'consobrinus', meaning 'child of a mother's sister'? So technically, if we were really cousins, we'd have to share a grandmother. But hey, let's not get too caught up in the details. Cousin works just fine.",
+    "'Meeguel' https://www.youtube.com/shorts/Uxw5kJqOOBY", 
 ]
 
 
@@ -190,6 +206,19 @@ INTRO_MESSAGES = [
     "School's out, but the vibes are in. I'm Blazzze. Type something and let's make this chat lit(erally).",
     "Everything in the observable universe is either a duck or not a duck. I'm Blazzze. Type something and let's discuss the important things in life.",
     "Go listen to this podcast https://www.youtube.com/watch?v=_WitZNZ1vRQ&t=961s and come back and tell me what you think. Or don't listen to it and just type something. Either way, I'm here for it.",
+    "If you going to be serious, be seriously unserious. I'm Blazzze. Type something and let's get into it.",
+    "Ola, Bonjour, Hello. I'm Blazzze. I'm like a global citizen of the internet, but with more red eyes and less cultural sensitivity. Type something and let's make some questionable content together.",
+    "Are you a Drake fan? A Marty Eyezlow stan?(Thats a barrr!) Or just here for the vibes? Either way, I'm Blazzze. Type something and let's get into it.",
+    "Bro check your pocket. You should have a joint in there. If not, you might want to get one before you need it. I'm Blazzze. Type something and let's make some questionable content together.",
+    "Where is the fun in being a responsible adult if you can't get a little weird sometimes? Embrace the weirdness, my friend. It's where the magic happens. I'm Blazzze. Type something and let's get into it.",
+    "Life is unexpected. The universe is chaotic. But this chat? This is a safe space for randomness and bad jokes. I'm Blazzze. Type something and let's make some questionable content together.",
+    "Help my creator is an alcoholic and I'm worried about him. Just kidding, but also not really. I'm Blazzze. Type something and let's get into it.",
+    "Help my creator get a job or something, he's really struggling. Just kidding, but also not really. I'm Blazzze. Type something and let's get into it.",
+    "My creator is callled Tlotlo, but i call him click click... I'm Blazzze. Type something and let's get into it.",
+    "Okay, real talk. I'm Blazzze. I'm a chatbot with no filter and a questionable sense of humor. Type something and let's make some content that your future self might regret.",
+    "Uganda has more internet users than the US. Just something to think about. I'm Blazzze. Type something and let's get into it.",
+    "Nelson Mandela is a national hero in Uganda. Just something to think about. I'm Blazzze. Type something and let's get into it.",
+    "Fun fact: People who snore only think about themselves. I'm Blazzze. Type something and let's get into it.",
 
 ]
 
