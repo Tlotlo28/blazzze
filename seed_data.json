@@ -1,0 +1,215 @@
+[
+{
+  "model": "munchies.snack",
+  "pk": 1,
+  "fields": {
+    "name": "3am Quesadilla",
+    "emoji": "🫓",
+    "description": "Cheese, tortilla, microwave. Stop overthinking it.",
+    "difficulty": 1,
+    "vibe": "CHAOTIC",
+    "is_published": true,
+    "created_at": "2026-05-21T19:14:54.001Z"
+  }
+},
+{
+  "model": "munchies.snack",
+  "pk": 2,
+  "fields": {
+    "name": "Honey Toast Spaghetti",
+    "emoji": "🍝",
+    "description": "Don't ask. Don't taste. Just trust.",
+    "difficulty": 4,
+    "vibe": "CHAOTIC",
+    "is_published": true,
+    "created_at": "2026-05-21T19:17:40.093Z"
+  }
+},
+{
+  "model": "munchies.snack",
+  "pk": 3,
+  "fields": {
+    "name": "Peanut Butter Spoon",
+    "emoji": "🥄",
+    "description": "The peanut butter is the meal. The spoon is the cutlery.",
+    "difficulty": 1,
+    "vibe": "BASIC",
+    "is_published": true,
+    "created_at": "2026-05-21T19:19:45.363Z"
+  }
+},
+{
+  "model": "munchies.snack",
+  "pk": 4,
+  "fields": {
+    "name": "Bunny Chow",
+    "emoji": "🍞",
+    "description": "Hollow out a loaf, fill it with the most. SA classic. Demolition guaranteed.",
+    "difficulty": 3,
+    "vibe": "SALTY",
+    "is_published": true,
+    "created_at": "2026-05-21T19:23:55.669Z"
+  }
+},
+{
+  "model": "munchies.snack",
+  "pk": 5,
+  "fields": {
+    "name": "Maltabella + Banana",
+    "emoji": "🥣",
+    "description": "Hot maize porridge with banana mashed in. Childhood reactivated.",
+    "difficulty": 2,
+    "vibe": "SWEET",
+    "is_published": true,
+    "created_at": "2026-05-21T19:26:31.020Z"
+  }
+},
+{
+  "model": "munchies.snack",
+  "pk": 6,
+  "fields": {
+    "name": "Ice Cream Sandwich (Literal)",
+    "emoji": "🥪",
+    "description": "Two slices of bread, scoop of ice cream. Yes.",
+    "difficulty": 2,
+    "vibe": "SWEET",
+    "is_published": true,
+    "created_at": "2026-05-21T19:27:42.745Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 1,
+  "fields": {
+    "name": "Couch Glue",
+    "emoji": "🛋️",
+    "tagline": "\"I'll get up in a minute\"",
+    "description": "Heavy indica. The kind that makes the couch feel like it's hugging you back. Side effects: forgetting why you stood up.",
+    "category": "FLOWER",
+    "price": "250.00",
+    "image": "products/Couch_Glue.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:19:34.631Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 2,
+  "fields": {
+    "name": "3am Philosopher",
+    "emoji": "🌿",
+    "tagline": "Indica that turns you into Socrates",
+    "description": "Warning: may result in eating cereal with a fork, peanut butter straight from the jar, and making enemies with your fridge.",
+    "category": "FLOWER",
+    "price": "280.00",
+    "image": "products/3am_Philosopher.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:23:21.226Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 3,
+  "fields": {
+    "name": "Goblin Mode",
+    "emoji": "🌿",
+    "tagline": "Snacks are not safe.",
+    "description": "Warning: may result in eating cereal with a fork, peanut butter straight from the jar, and making enemies with your fridge.",
+    "category": "FLOWER",
+    "price": "350.00",
+    "image": "products/Goblin_Mode.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:31:19.346Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 4,
+  "fields": {
+    "name": "Clapback Pack",
+    "emoji": "🌿",
+    "tagline": "For when you smoke and remember everything.",
+    "description": "Suddenly you got fake arguments in the shower and perfect comebacks to beef from 2019.",
+    "category": "FLOWER",
+    "price": "200.00",
+    "image": "products/Clapback_Pack.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:33:37.030Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 5,
+  "fields": {
+    "name": "BSM Reserve",
+    "emoji": "🌿",
+    "tagline": "Aged longer than the music.",
+    "description": "Premium purple strain inspired by brother BSM — incredible quality, but somehow still “coming soon” since the Stone Age.",
+    "category": "FLOWER",
+    "price": "100.00",
+    "image": "products/pexels-keloke-grow-2160410644-36874632.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:37:28.362Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 6,
+  "fields": {
+    "name": "Delayed Regret",
+    "emoji": "🍫",
+    "tagline": "“This ain’t shit” – famous last words.",
+    "description": "For the impatient legends who take another one and then spend the next hour bargaining with God.",
+    "category": "EDIBLE",
+    "price": "80.00",
+    "image": "products/Delayed_Regret.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:39:52.171Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 7,
+  "fields": {
+    "name": "Time Traveler Gummies",
+    "emoji": "🍫",
+    "tagline": "5 minutes = 3 business days.",
+    "description": "One gummy in and suddenly you’ve lived three lifetimes waiting for Uber Eats.",
+    "category": "EDIBLE",
+    "price": "80.00",
+    "image": "products/Time_Traveler_Gummies.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:44:11.478Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 8,
+  "fields": {
+    "name": "Silent Assassin",
+    "emoji": "🍫",
+    "tagline": "Cute. Dangerous. Disrespectful.",
+    "description": "Tiny edible, huge betrayal. Looks harmless until you forget how legs work.",
+    "category": "EDIBLE",
+    "price": "100.00",
+    "image": "products/Silent_Assassin.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:47:21.511Z"
+  }
+},
+{
+  "model": "buy.product",
+  "pk": 9,
+  "fields": {
+    "name": "Mystery Box",
+    "emoji": "📦",
+    "tagline": "Could be anything. Probably is.",
+    "description": "A sealed box. We don't know what's in it. The guy who packed it doesn't know either. You'll find out together.",
+    "category": "MYSTERY",
+    "price": "150.00",
+    "image": "products/Mystery_Box.jpg",
+    "is_published": true,
+    "created_at": "2026-05-21T23:53:23.296Z"
+  }
+}
+]
