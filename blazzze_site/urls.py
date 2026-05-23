@@ -8,13 +8,15 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("munchies/", include("munchies.urls")),
     path("buy/", include("buy.urls")),
-    path("chat/", include("chat.urls")),   # ← new
+    path("chat/", include("chat.urls")),
     path("", include("core.urls")),
 ]
 
-# Serve uploaded media files in development
+# Serve uploaded media files (works in both dev and prod for this project)
+urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+# Debug toolbar (dev only)
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
     urlpatterns = [
         path("__debug__/", include("debug_toolbar.urls")),
     ] + urlpatterns

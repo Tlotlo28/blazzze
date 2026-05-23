@@ -15,7 +15,9 @@ __pycache__/
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
-media/
+
+# media/ is intentionally NOT ignored — product images ship with the repo for V1 deployment.
+# When moving to Cloudinary/S3 in V2, ignore this folder again.
 
 # Environment variables
 .env

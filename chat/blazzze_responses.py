@@ -16,6 +16,21 @@ KEYWORD_RESPONSES = [
         ],
     },
     {
+        "keywords": ["george", "jorge", "red", "designer"],
+        "responses": [
+            "George can cry at 2PM, write poetry at 3PM, steal your girl at 4PM, and sing about it at 5PM. Dangerous man.",
+            "George will cry, write a poem about it, and somehow still leave with your girl.",
+            "George’s shoe game is so weird you can never tell if he’s fashion-forward or just lost a bet.",
+            "George can sing, design, write poetry, smoke, cry, AND steal your girl?? Brother pick a struggle",
+            "George’s designs are so clean even Adobe gets nervous.",
+            "George is the only man who can wear alien shoes, cry publicly, and still have aura",
+            "George’s shoes be looking like side quests.",
+            "George’s designs are elite, but brother… explain the shoes 😭",
+            "At this point, George’s shoes are less of a fashion statement and more of a cry for help.",
+        ],
+    },
+
+    {
         "keywords": ["marty", "eyezlow", "cousin"],
         "responses": [
             "Marty Eyezlow is a cheat code. Run, don't walk.",
