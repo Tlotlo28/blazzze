@@ -35,7 +35,7 @@ DEFAULT_QUOTES = [
     "Healing is weird because one day the pain becomes a story you tell yourself to feel better. Like, 'remember that time I was heartbroken? Yeah, that sucked, but look how strong I am now!' It's like we're all just trying to rewrite our own narratives to make sense of the chaos.",
     "A wise man once said........I forgot. But it was probably something deep about life and weed. Or maybe it was just a joke. Either way, I'm sure it was profound.",
     "Life is temporary. Snacks are urgent.",
-    "Marty Eyelow once said 'Had faith till i heard her music' and honestly same. I had faith in humanity until I heard her music. Now I'm just like... what is this? Why does it exist? Who hurt you, Marty? Who hurt you so bad that you had to make this music? or maybe he was just talking about Faith the slay queen, but either way, I'm shook.",
+    "Marty Eyelow once said 'Had faith till i heard her music' and honestly same. I had faith in humanity until I heard her music....or maybe he was talking about someone or something elsee, idk.",
 
 ]
 

@@ -135,7 +135,7 @@
           <li><a href="{% url 'munchies:list' %}">Munchies</a></li>
           <li><a href="{% url 'buy:list' %}">Buy</a></li>
           <li><a href="{% url 'chat:page' %}">Chat w/ Blazzze</a></li>
-          <li><a href="#">Why Weed?</a></li>
+          <li><a href="{% url 'core:why_cannabis' %}">Why Weed?</a></li>
         </ul>
       </nav>
     </header>
@@ -147,9 +147,16 @@
     <footer>
       <p>&copy; {% now "Y" %} Blazzze. The Internet's Couch.</p>
       <p style="margin-top: 0.5rem; opacity: 0.7;">
-        <a href="#">Legal & Compliance</a>
+        <a hx-get="{% url 'core:legal_modal' %}" hx-target="#legal-modal" hx-swap="innerHTML" style="cursor: pointer;">Legal & Compliance</a>
+        &nbsp;·&nbsp;
+        <a href="{% url 'core:contact' %}">Contact</a>
       </p>
     </footer>
+
+<div id="legal-modal"></div>
   </div>
 </body>
 </html>
+
+
+<div id="legal-modal"></div>

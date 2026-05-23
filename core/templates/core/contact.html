@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+
+{% block title %}Contact — Blazzze{% endblock %}
+
+{% block content %}
+<style>
+  .contact-hero { text-align: center; padding: 3rem 1rem 2rem; }
+  .contact-title {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: clamp(3rem, 10vw, 6rem);
+    color: var(--blz-green-dark);
+    text-shadow: 4px 4px 0 var(--blz-green);
+    line-height: 0.95;
+  }
+  .contact-sub { color: var(--blz-gray); font-size: 1.05rem; max-width: 500px; margin: 1rem auto; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 2rem auto;
+  }
+  .contact-card {
+    background: var(--blz-cream);
+    border: 4px solid var(--blz-dark);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 6px 6px 0 var(--blz-green-dark);
+  }
+  .contact-icon { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .contact-card h3 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    color: var(--blz-dark);
+    margin-bottom: 0.5rem;
+  }
+  .contact-card a {
+    color: var(--blz-red);
+    text-decoration: none;
+    font-weight: 600;
+    word-break: break-word;
+  }
+  .contact-card a:hover { text-decoration: underline; }
+
+  .wa-btn {
+    display: inline-block;
+    background: var(--blz-green);
+    color: var(--blz-dark);
+    border: 3px solid var(--blz-dark);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: 'Bungee', sans-serif;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    margin-top: 0.5rem;
+  }
+
+  .hours-note {
+    text-align: center;
+    max-width: 600px;
+    margin: 2rem auto;
+    color: var(--blz-gray);
+    font-style: italic;
+  }
+</style>
+
+<section class="contact-hero">
+  <h1 class="contact-title">HOLLA AT US</h1>
+  <p class="contact-sub">
+    Got a snack idea? Spotted a typo? Want to know why Blazzze is so mean? Slide in below.
+  </p>
+</section>
+
+<div class="contact-grid">
+  <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>EMAIL</h3>
+    <a href="mailto:yo@blazzze.test">yo@blazzze.test</a>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>WHATSAPP</h3>
+    <a href="https://wa.me/27000000000" target="_blank" rel="noopener">
+      <span class="wa-btn">CHAT NOW</span>
+    </a>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>PHONE</h3>
+    <a href="tel:+27000000000">+27 00 000 0000</a>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon"></div>
+    <h3>FIND US</h3>
+    <p>Pretoria, ZA<br><small style="opacity:0.7;">(Mostly on the couch)</small></p>
+  </div>
+</div>
+
+<p class="hours-note">
+  <strong>Operating hours:</strong> Whenever Blazzze feels like it.<br>
+  We'll get back to you when we get back to you. 🍃
+</p>
+{% endblock %}

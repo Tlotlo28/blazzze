@@ -34,3 +34,12 @@ def denied(request):
 def preview_404(request):
     """Dev-only: render the 404 template so we can iterate on it."""
     return render(request, "404.html", status=404)
+
+def why_cannabis(request):
+    return render(request, "core/why_cannabis.html")
+
+def contact(request):
+    return render(request, "core/contact.html")
+
+def legal_modal(request):
+    return render(request, "core/_legal_modal.html")

@@ -174,7 +174,7 @@ INTRO_MESSAGES = [
     "Having an existential crisis? A mild inconvenience? Or just bored out of your mind? I'm here to provide unhelpful commentary for all of it. Type something and let's get into it.",
     "School's out, but the vibes are in. I'm Blazzze. Type something and let's make this chat lit(erally).",
     "Everything in the observable universe is either a duck or not a duck. I'm Blazzze. Type something and let's discuss the important things in life.",
-    "Listen to this podcast https://www.youtube.com/watch?v=_WitZNZ1vRQ&t=961s and come back and tell me what you think. Or don't listen to it and just type something. Either way, I'm here for it.",
+    "Go listen to this podcast https://www.youtube.com/watch?v=_WitZNZ1vRQ&t=961s and come back and tell me what you think. Or don't listen to it and just type something. Either way, I'm here for it.",
 
 ]
 

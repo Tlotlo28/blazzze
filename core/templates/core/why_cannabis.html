@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+{% load blazzze_tags %}
+
+{% block title %}Why Weed? — Blazzze{% endblock %}
+
+{% block content %}
+<style>
+  .why-hero { text-align: center; padding: 3rem 1rem 2rem; }
+  .why-title {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: clamp(3rem, 10vw, 6.5rem);
+    color: var(--blz-green-dark);
+    text-shadow: 4px 4px 0 var(--blz-green);
+    line-height: 0.95;
+  }
+  .why-intro {
+    max-width: 700px;
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  .section-label {
+    font-family: 'Bungee', sans-serif;
+    font-size: 1rem;
+    letter-spacing: 3px;
+    color: var(--blz-red);
+    margin: 3rem 0 1rem;
+    text-align: center;
+  }
+  .effect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .effect-card {
+    background: var(--blz-cream);
+    border: 4px solid var(--blz-dark);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: 5px 5px 0 var(--blz-green-dark);
+  }
+  .effect-emoji { font-size: 2.5rem; line-height: 1; margin-bottom: 0.5rem; }
+  .effect-card h3 {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    color: var(--blz-dark);
+  }
+  .effect-card p { font-size: 0.95rem; color: var(--blz-dark); }
+  .caveat { font-size: 0.78rem; color: var(--blz-gray); margin-top: 0.5rem; font-style: italic; }
+
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .type-card {
+    background: var(--blz-green);
+    border: 4px solid var(--blz-dark);
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 5px 5px 0 var(--blz-green-dark);
+  }
+  .type-card h3 {
+    font-family: 'Bungee', sans-serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--blz-dark);
+    letter-spacing: 2px;
+  }
+  .type-card p { color: var(--blz-dark); font-size: 0.95rem; }
+
+  .method-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+  }
+  .method-item {
+    background: var(--blz-cream);
+    border: 3px solid var(--blz-dark);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+  }
+  .method-item strong {
+    display: block;
+    font-family: 'Bungee', sans-serif;
+    font-size: 0.9rem;
+    color: var(--blz-dark);
+    margin: 0.5rem 0 0.25rem;
+  }
+  .method-item span { font-size: 0.85rem; color: var(--blz-gray); }
+
+  .blazzze-disclaim {
+    background: var(--blz-dark);
+    color: var(--blz-cream);
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 3rem;
+    border: 4px solid var(--blz-green);
+  }
+  .blazzze-disclaim h3 {
+    font-family: 'Bagel Fat One', sans-serif;
+    font-size: 1.8rem;
+    color: var(--blz-green);
+    margin-bottom: 1rem;
+  }
+  .blazzze-disclaim ul { list-style: none; padding: 0; }
+  .blazzze-disclaim li {
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed rgba(243, 238, 216, 0.2);
+  }
+  .blazzze-disclaim li::before { content: "🚫 "; }
+
+  .sources-note {
+    text-align: center;
+    margin-top: 2rem;
+    color: var(--blz-gray);
+    font-size: 0.85rem;
+    font-style: italic;
+  }
+</style>
+
+<section class="why-hero">
+  <h1 class="why-title">WHY WEED? 🌿</h1>
+  <p class="why-intro">
+    Real talk: people have used cannabis for thousands of years for a bunch of different reasons.
+    The science is catching up. Here's what research <em>suggests</em>, what the types actually mean,
+    and what Blazzze refuses to lie to you about.
+  </p>
+</section>
+
+<div class="section-label">WHAT THE RESEARCH SUGGESTS</div>
+
+<div class="effect-grid">
+  <article class="effect-card">
+    <div class="effect-emoji"></div>
+    <h3>Sleep</h3>
+    <p>Many users report cannabis helps them fall asleep faster, especially indica-dominant strains.
+      CBD is also being studied for sleep disorders.</p>
+    <p class="caveat">Heavy regular use may affect REM sleep quality long-term.</p>
+  </article>
+
+  <article class="effect-card">
+    <div class="effect-emoji"></div>
+    <h3>Pain</h3>
+    <p>Research suggests cannabinoids may help with chronic pain — particularly neuropathic pain
+      that doesn't respond well to standard meds.</p>
+    <p class="caveat">Not a replacement for prescribed treatment. Talk to a doctor.</p>
+  </article>
+
+  <article class="effect-card">
+    <div class="effect-emoji"></div>
+    <h3>Anxiety</h3>
+    <p>Mixed evidence. Low doses of THC and CBD may reduce anxiety in some users. High doses can
+      <em>increase</em> it. Highly individual.</p>
+    <p class="caveat">If you have an anxiety disorder, start low and slow — or skip entirely.</p>
+  </article>
+
+  <article class="effect-card">
+    <div class="effect-emoji"></div>
+    <h3>Appetite & Nausea</h3>
+    <p>Well-documented. THC is studied and used clinically for chemotherapy-induced nausea and
+      appetite loss.</p>
+    <p class="caveat">aka how the munchies became a medical term.</p>
+  </article>
+
+  <article class="effect-card">
+    <div class="effect-emoji"></div>
+    <h3>Inflammation</h3>
+    <p>Cannabinoids show anti-inflammatory properties in laboratory and animal studies. Human research is ongoing.</p>
+    <p class="caveat">Topicals (creams) are an interesting area to watch.</p>
+  </article>
+
+  <article class="effect-card">
+    <div class="effect-emoji"></div>
+    <h3>Creativity & Mood</h3>
+    <p>Anecdotal but widely reported — particularly with sativa-dominant strains. Hard to measure
+      scientifically, easy to enjoy.</p>
+    <p class="caveat">Your "amazing idea at 2am" still needs sober review at 11am.</p>
+  </article>
+</div>
+
+<div class="section-label">TYPES AT A GLANCE</div>
+
+<div class="type-grid">
+  <div class="type-card">
+    <h3>INDICA</h3>
+    <p><strong>Body high.</strong> Couch, blanket, deep sleep. The "I'll get up in a minute" energy.
+      Better for nighttime.</p>
+  </div>
+  <div class="type-card">
+    <h3>SATIVA</h3>
+    <p><strong>Head high.</strong> Energetic, talkative, sometimes giggly. Better for daytime,
+      social settings, creative tasks.</p>
+  </div>
+  <div class="type-card">
+    <h3>HYBRID</h3>
+    <p><strong>Both.</strong> Most modern strains are hybrids — bred for specific balances of
+      indica/sativa traits. Read the label.</p>
+  </div>
+</div>
+
+<div class="section-label">HOW PEOPLE USE IT</div>
+
+<div class="method-list">
+  <div class="method-item"><strong>Flower</strong><span>Classic. Pre-rolls or joints.</span></div>
+  <div class="method-item"><strong>Edibles</strong><span>Slower onset, longer duration.</span></div>
+  <div class="method-item"><strong>Vape</strong><span>Less smoke, dose control.</span></div>
+  <div class="method-item"><strong>Oils/Tinctures</strong><span>Drops under the tongue.</span></div>
+  <div class="method-item"><strong>Topicals</strong><span>Creams/balms. No high.</span></div>
+</div>
+
+<div class="blazzze-disclaim">
+  <h3>WHAT BLAZZZE WON'T DO</h3>
+  <ul>
+    <li>Claim cannabis cures anything. Research is ongoing.</li>
+    <li>Replace your doctor. Talk to one for medical questions.</li>
+    <li>Pretend it's risk-free. It isn't. Dependency, anxiety, and impaired driving are real.</li>
+    <li>Tell you what dose is right for you. Start low, go slow.</li>
+    <li>Endorse use by minors, pregnant people, or anyone with relevant medical contraindications.</li>
+  </ul>
+  <p style="margin-top: 1rem; font-style: italic;">
+    But Blazzze will always tell you to drink water. Drink water.
+  </p>
+</div>
+
+<p class="sources-note">
+  Educational overview only. References general findings from organizations like the WHO,
+  NIH, and peer-reviewed reviews (e.g. <em>JAMA</em>, <em>The Lancet</em>). Not medical advice.
+</p>
+{% endblock %}

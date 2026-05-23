@@ -1,0 +1,104 @@
+<div class="modal-overlay"
+     onclick="if(event.target===this) this.closest('#legal-modal').innerHTML=''"
+     style="position:fixed; inset:0; background:rgba(26,26,26,0.85); z-index:200; display:flex; align-items:center; justify-content:center; padding:1rem; animation: fade-in 0.2s ease-out;">
+
+  <style>
+    @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes modal-pop {
+      from { transform: scale(0.85); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    .legal-card {
+      background: var(--blz-cream);
+      border: 5px solid var(--blz-dark);
+      border-radius: 20px;
+      padding: 2rem;
+      max-width: 620px;
+      width: 100%;
+      max-height: 85vh;
+      overflow-y: auto;
+      box-shadow: 10px 10px 0 var(--blz-green-dark);
+      position: relative;
+      animation: modal-pop 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .legal-close {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: var(--blz-red);
+      color: var(--blz-cream);
+      border: 3px solid var(--blz-dark);
+      border-radius: 50%;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    .legal-card h2 {
+      font-family: 'Bagel Fat One', sans-serif;
+      font-size: 2rem;
+      color: var(--blz-green-dark);
+      margin-bottom: 1rem;
+      line-height: 1.1;
+    }
+    .legal-card h3 {
+      font-family: 'Bungee', sans-serif;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      color: var(--blz-red);
+      margin: 1.25rem 0 0.5rem;
+    }
+    .legal-card p { margin-bottom: 0.75rem; line-height: 1.5; font-size: 0.95rem; }
+    .legal-card ul { margin: 0.5rem 0 1rem 1.5rem; }
+    .legal-card li { margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .legal-card em { color: var(--blz-green-dark); font-style: italic; }
+  </style>
+
+  <div class="legal-card">
+    <button class="legal-close" onclick="this.closest('#legal-modal').innerHTML=''">✕</button>
+
+    <h2>COMPLIANCE & STUFF ⚖️</h2>
+
+    <h3>WHAT THIS SITE IS</h3>
+    <p>
+      Blazzze is a <em>parody and educational web project</em>. No actual sale of cannabis products
+      occurs through this site. Every "Buy Now" button is interactive comedy — it puffs a CSS cloud
+      and goes nowhere. The products listed are fictional.
+    </p>
+
+    <h3>SOUTH AFRICAN LEGAL CONTEXT</h3>
+    <p>For real-world context (not legal advice):</p>
+    <ul>
+      <li>The <strong>Cannabis for Private Purposes Act</strong> (signed into law in 2024) governs personal cannabis use in South Africa.</li>
+      <li>The <strong>Drugs and Drug Trafficking Act, 1992</strong> remains relevant for commercial scenarios outside the private-use framework.</li>
+      <li>Medical and commercial activity is separately regulated. License requirements apply.</li>
+    </ul>
+    <p>
+      The legal landscape continues to evolve. <strong>None of the above constitutes legal advice.</strong>
+      Specific questions should go to a qualified South African attorney.
+    </p>
+
+    <h3>AGE</h3>
+    <p>
+      This site is for adults 18+. If you're reading this, you've already passed our age gate —
+      or lied, which we have no way to verify. Don't lie about the bigger stuff in life.
+    </p>
+
+    <h3>NO MEDICAL CLAIMS</h3>
+    <p>
+      Nothing on this site is medical advice. The "Why Weed?" page summarises general research
+      with appropriate caveats. For health decisions, speak to a healthcare professional.
+    </p>
+
+    <h3>FOR ACTUAL BUSINESSES</h3>
+    <p>
+      If you run a real cannabis business and stumbled here looking for legal copy: please
+      hire a lawyer. Don't copy this. Seriously.
+    </p>
+
+    <p style="margin-top: 1.5rem; font-style: italic; color: var(--blz-gray);">
+      — Blazzze (a cartoon, not a lawyer)
+    </p>
+  </div>
+</div>
