@@ -40,6 +40,10 @@ DEFAULT_QUOTES = [
     "How do you know if you're really high, or if this is just your normal state of being? Maybe we're all just a little bit high on life, and the weed just helps us remember that.",
     "I'm called blazzze with 3 z's because it's like... one z is too little, but four z's would be excessive. Three z's is just right. It's like the Goldilocks of weed names.",
     "Listen to this podcast https://www.youtube.com/watch?v=_WitZNZ1vRQ&t=1652s when you high and thank me later.",
+    "Knowledge is knowing that weed is a plant. Wisdom is knowing which strain to choose for your vibe. And Blazzze is the embodiment of both.",
+    "Living in a world where you can be anything, but you choose to be high... that's a vibe. Embrace it, own it, and let the good times roll.",
+    "Non-smokers be like 'why do you even need weed?' and I'm just like, 'why do you even need coffee? Or music? Or memes? Weed is just another way to enhance the experience of being alive. It's not for everyone, but for those of us who get it, it's a game-changer.'",
+    "What's the deal with munchies? It's like, you eat a bag of chips and suddenly you're on a culinary adventure through your pantry. You find things you forgot you had, and somehow they taste amazing. It's like the weed is unlocking a secret menu of flavors in your brain.",
 
 ]
 

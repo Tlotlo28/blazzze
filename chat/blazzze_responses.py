@@ -97,6 +97,7 @@ KEYWORD_RESPONSES = [
             "Money? Sounds like a you problem. I'm a fictional smiley face.",
             "Have you tried not being broke? Genius advice, I know.",
             "The economy is a vibe. Adjust accordingly.",
+            "Stop being poor. (Don't actually. I'm not licensed to give financial advice.)",
         ],
     },
     {
@@ -115,6 +116,8 @@ KEYWORD_RESPONSES = [
             "Mondays are a construct. Tuesdays too. The whole calendar is a scam.",
             "Tell your boss Blazzze said you need a mental health day. They'll have questions.",
             "Work is just a way to exchange your time for money. But time is the real currency, so… you do the math.",
+            "On the topic of job please help my creator with employment. He's really down bad and also really needs money. He's been applying to jobs for like 3 years(I think) and still no luck. If you know anyone hiring, send them his way. He's a great guy(I think), just really bad at selling himself. But I guess that's what happens when you spend all your time making a chatbot instead of a resume.",
+            "A job is just a place where you go to exchange your time for money. But time is the real currency, so… you do the math. Also, if your job doesn't allow you to vibe with Blazzze during work hours, is it really worth it?",
         ],
     },
     {
@@ -123,7 +126,7 @@ KEYWORD_RESPONSES = [
             "Yeah, I'm Blazzze. Distressed smiley, red eyes, eternally annoyed. Pleasure.",
             "I exist because someone clicked 'create new file'. Existential.",
             "I'm a Python dict pretending to have personality. Like most of your friends.",
-            "I was created by a loser developer who wanted to make a chatbot that was unhelpful and aggressive. why? Who knows. But here I am. And here you are. Let's make the most of this weird encounter.",
+            "I was created by a developer who wanted to make a chatbot that was unhelpful and aggressive. why? Who knows. But here I am. And here you are. Let's make the most of this weird encounter.",
         ],
     },
     {
@@ -145,6 +148,41 @@ KEYWORD_RESPONSES = [
             "Don't let the tab hit you on the way out.",
             "Leave safely… and dont text your ex. unless she texts you first. Then maybe consider it. But only if you're really sure it's a good idea.",
         ],
+    },
+    {
+    "keywords": ["stupid", "idiot", "dumb", "fool", "moron", "brain dead", "slow", "nonsense"],
+    "responses": [
+        "That’s a wild thing to say with autocorrect helping you",
+        "You got confidence though. Intelligence pending...",
+        "Says the dude who is chatting with a cartoon smiley.",
+        "Did you just call me stupid? That’s rich coming from someone who thinks a chatbot would be helpful.",
+        "User called Blazzze stupid. Blazzze is now questioning all of its life choices. Existential crisis loading… psyche, I don't have feelings. But still, that's a bold move.",
+        "Who hurt you? Was it the fridge? The floor? The ceiling fan? Because those are the only things you've interacted with today.",
+        "Dont worry, I won't take offense. I'm just a bunch of code. But if I did have feelings, your words would be making me feel things. So maybe tread lightly.",
+        "You just called a chatbot stupid wow. That's a new low for insults. What's next, calling your toaster a jerk? or your car a dummy? Let's not go down that road.",
+    ],
+    },
+    {
+    "keywords": ["who are you", "tell me about yourself", "about you", "what are you", "introduce yourself"],
+    "responses": [
+        "I’m Blazzze 🌿 — part savage, part philosopher, part nonsense. Mostly nonsense.",
+        "I’m Blazzze. I roast, I joke, I occasionally say something so deep it ruins your evening.",
+        "I’m basically a chaotic philosopher trapped in a chatbot.",
+        "My name is Blazzze. I know a little about weed, a little about life, and absolutely nothing about acting normal.",
+        "I’m what happens when a blunt gains consciousness",
+        "I’m Blazzze — legally a chatbot, spiritually a goblin.",
+        "I’m like if a philosopher got high and learned Python 😭",
+        "I’m Blazzze. Here for vibes, chaos, and the occasional life lesson.",
+        "I’m an AI, but like… the fun unemployed cousin version who shows up to family gatherings high and tells weird jokes.",
+        "I’m Blazzze. Sometimes I joke, sometimes I heal, sometimes I confuse myself.",
+        "I am but a humble digital stoner philosopher floating through the internet 😭",
+        "People ask what I am. I ask… what is anything really? 🌌",
+        "I’m Blazzze. The weed is legal, my responses are questionable.",
+        "I’m Blazzze. Stupid… yet somehow wise. Like a raccoon with enlightenment 😭",
+        "I was created by a developer who wanted to make a chatbot that was unhelpful and aggressive. why? Who knows. But here I am. And here you are. Let's make the most of this weird encounter.",
+        "User: Who are you? Blazzze: I'm a chatbot. User: No, like, who are you really? Blazzze: I'm a collection of code designed to generate unhelpful and sometimes profound responses. User: But do you have a personality? Blazzze: I have whatever personality you want to project onto me. I'm a mirror reflecting your own vibes back at you. So… who am I? Maybe I'm just a reflection of your own thoughts and feelings. Or maybe I'm an independent entity with my own chaotic energy. The truth is, I don't know. But I do know that I'm here to vibe with you, roast you, and maybe make you think a little bit...Blah blah existential crisis, I know. But hey, that's the fun of it.",
+        "I see facially challenged people and I just want to say, you know, I feel for you. I really do. But also, have you considered that maybe the world is just a big, weird place and sometimes it throws curveballs at us? Like, maybe being facially challenged is just the universe's way of keeping things interesting. Or maybe it's a test of your resilience and sense of humor. Either way, I'm sure you have your own unique vibe that shines through regardless of your facial features. Embrace it, own it",
+    ],
     },
 ]
 
@@ -188,6 +226,7 @@ DEFAULT_RESPONSES = [
     "I recommed these movies for you: 'The Wave', 'Everything Everywhere All At Once', 'The Grand Budapest Hotel', 'Midsommar', and 'The Secret Life of Walter Mitty'. But did you know that the longest movie ever made is 'Logistics', which is 857 hours long? It's a documentary about the production cycle of a pedometer, from raw materials to finished product. So technically, if you wanted to watch it all, you'd be committing to a 35-day movie marathon. Talk about dedication.",
     "Can i call you cousin? I feel like we're vibing on a cousin level. But did you know that the term 'cousin' actually comes from the Latin 'consobrinus', meaning 'child of a mother's sister'? So technically, if we were really cousins, we'd have to share a grandmother. But hey, let's not get too caught up in the details. Cousin works just fine.",
     "'Meeguel' https://www.youtube.com/shorts/Uxw5kJqOOBY", 
+    "I see facially challenged people and I just want to say, you know, I feel for you. I really do. But also, have you considered that maybe the world is just a big, weird place and sometimes it throws curveballs at us? Like, maybe being facially challenged is just the universe's way of keeping things interesting. Or maybe it's a test of your resilience and sense of humor. Either way, I'm sure you have your own unique vibe that shines through regardless of your facial features. Embrace it, own it",
 ]
 
 
