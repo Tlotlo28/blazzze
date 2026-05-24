@@ -1,1 +1,0 @@
-Runserver: python manage.py runserver
